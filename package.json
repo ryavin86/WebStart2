@@ -1,0 +1,22 @@
+{
+  "name": "gulp-test",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryavin86/WebStart2.git"
+  },
+  "author": "Ryabish Victor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryavin86/WebStart2/issues"
+  },
+  "homepage": "https://github.com/ryavin86/WebStart2#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
