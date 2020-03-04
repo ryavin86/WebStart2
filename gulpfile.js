@@ -17,9 +17,9 @@ function bs() {
 }
 
 function serveSass() {
-  return src("./WebStart2/sass/*.sass")
+  return src("./WebStart2/sass/**/*.sass")
       .pipe(sass())
-      .pipe(dest("./Webstart2/css/"))
+      .pipe(dest("./Webstart2/css"))
       .pipe(browserSync.stream());
 };
 
