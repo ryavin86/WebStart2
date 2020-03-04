@@ -1,26 +1,26 @@
-var gulp = require('gulp');
+var {src, dest, watch} = require('gulp');
 var browserSync = require('browser-sync').create();
-var cssmin = require('gulp-cssmin');
 var rename = require('gulp-rename');
-
-gulp.task('hello', function(done) {
-  console.log('Привет, мир');
-  done();
-})
+var sass = require('gulp-sass');
 
 // Static server
-gulp.task('browser-sync', function() {
+function bs() {
+  serveSass();
   browserSync.init({
       server: {
           baseDir: "./"
       }
   });
-  gulp.watch("./WebStart2/index.html").on('change', browserSync.reload);
-});
+  watch("./WebStart2/index.html").on('change', browserSync.reload);
+  watch("./WebStart2/sass/**/*.sass").on('change', serveSass);
+  watch("./WebStart2/js/*.js").on('change', browserSync.reload);
+}
 
-gulp.task('default', function () {
-  gulp.src('./WebStart2/style.css')
-      .pipe(cssmin())
-      .pipe(rename({suffix: '.min'}))
-      .pipe(gulp.dest('dist'));
-});
+function serveSass() {
+  return src("WebStart2/sass/*.sass")
+      .pipe(sass())
+      .pipe(dest("Webstart2/css"))
+      .pipe(browserSync.stream());
+};
+
+exports.serve = bs;
