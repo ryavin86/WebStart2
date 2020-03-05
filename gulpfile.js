@@ -11,15 +11,15 @@ function bs() {
           baseDir: "./"
       }
   });
-  watch("./WebStart2/index.html").on('change', browserSync.reload);
-  watch("./WebStart2/sass/**/*.sass").on('change', serveSass);
-  watch("./WebStart2/js/*.js").on('change', browserSync.reload);
+  watch("index.html").on('change', browserSync.reload);
+  watch("sass/**/*.sass").on('change', serveSass);
+  watch("js/*.js").on('change', browserSync.reload);
 }
 
 function serveSass() {
-  return src("./WebStart2/sass/**/*.sass")
+  return src("sass/**/*.sass")
       .pipe(sass())
-      .pipe(dest("./Webstart2/css"))
+      .pipe(dest("css"))
       .pipe(browserSync.stream());
 };
 
