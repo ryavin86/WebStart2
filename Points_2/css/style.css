@@ -74,7 +74,6 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   /* 2 */ }
 
@@ -337,14 +336,6 @@ template {
 
 .contacts__phone {
   margin-right: 45px; }
-
-.container {
-  max-width: 1256px;
-  margin: auto; }
-
-.block {
-  -webkit-animation: show 2s ease 2s infinite;
-  animation: show 2s ease 2s infinite; }
 
 body {
   font-family: sans-serif;
