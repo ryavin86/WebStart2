@@ -323,7 +323,8 @@ template {
   border: none;
   border-radius: 2px;
   text-transform: uppercase;
-  font-size: 0.93rem; }
+  font-size: 0.93rem;
+  font-weight: normal; }
   .button:hover {
     cursor: pointer; }
   .button--primary {
@@ -451,7 +452,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   padding-top: 100px;
-  background: #131313 url("/img/hero-bg.jpg") no-repeat center/cover;
+  background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
   height: 100vh;
   color: #fff; }
   .hero::before {
@@ -497,7 +498,7 @@ body {
     text-decoration: none; }
     .hero__scroll-down::after {
       content: '';
-      background: url("/img/arrow_down.svg") no-repeat center;
+      background: url("../img/arrow_down.svg") no-repeat center;
       width: 30px;
       height: 30px;
       border: 2px solid #E3B373;
@@ -530,7 +531,8 @@ body {
   font-family: 'Yeseva One', cursive;
   text-transform: uppercase;
   font-size: 2.857rem;
-  line-height: 1.4; }
+  line-height: 1.4;
+  font-weight: normal; }
   .title--primary {
     color: #E3B373; }
 
@@ -580,7 +582,8 @@ body {
   text-transform: uppercase;
   background-color: #E3B373;
   color: #fff;
-  padding: 1.214rem 2.6rem; }
+  padding: 1.214rem 2.6rem;
+  font-weight: normal; }
 
 .modal {
   opacity: 0;
@@ -603,7 +606,7 @@ body {
   .modal__dialog {
     position: relative;
     max-width: 36.36rem;
-    background: #131313 url("/img/bg-lines.svg") no-repeat center;
+    background: #131313 url("../img/bg-lines.svg") no-repeat center;
     padding: 0.2357rem 3.5rem 1.928rem;
     color: #fff; }
   .modal__close {
