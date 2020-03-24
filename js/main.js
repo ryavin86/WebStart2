@@ -42,4 +42,22 @@ $(document).ready(function () {
 
   new WOW().init();
 
+  //валидация формы
+  $('.modal__form').validate({
+    rules: {
+      userName: "required",
+      userEmail: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      name: "Please specify your name",
+      email: {
+        required: "We need your email address to contact you",
+        email: "Your email address must be in the format of name@domain.com"
+      }
+    }
+  });
+
 });
