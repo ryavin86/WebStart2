@@ -382,6 +382,12 @@ template {
   .policy__label--center {
     justify-content: center; }
 
+label.invalid {
+  color: tomato; }
+
+input.invalid {
+  border-bottom: 1px solid tomato; }
+
 .container {
   width: 85%;
   max-width: 1256px;

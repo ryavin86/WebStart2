@@ -44,20 +44,74 @@ $(document).ready(function () {
 
   //валидация формы
   $('.modal__form').validate({
+    errorClass: "invalid",
     rules: {
-      userName: "required",
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
       userEmail: {
         required: true,
         email: true
       }
     },
     messages: {
-      name: "Please specify your name",
-      email: {
-        required: "We need your email address to contact you",
-        email: "Your email address must be in the format of name@domain.com"
+      userName: {
+        required: "Имя обязательно!",
+        minlength: "Имя не менее 2 букв и не более 15",
+        maxlength: "Имя не более 15 символов"
+      },
+      userPhone: "Телефон обязателен!",
+      userEmail: {
+        required: "Укажите ваш e-mail",
+        email: "Введите в формате name@domain.com"
       }
     }
   });
+
+  $('.footer__form').validate({
+    errorClass: "invalid",
+    rules: {
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
+    },
+    messages: {
+      userName: {
+        required: "Имя обязательно!",
+        minlength: "Имя не менее 2 букв и не более 15",
+        maxlength: "Имя не более 15 символов"
+      },
+      userPhone: "Телефон обязателен!",
+    }
+  });
+
+  $('.control__form').validate({
+    errorClass: "invalid",
+    rules: {
+      controlUserName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      controlUserPhone: "required",
+    },
+    messages: {
+      controlUserName: {
+        required: "Имя обязательно!",
+        minlength: "Имя не менее 2 букв и не более 15",
+        maxlength: "Имя не более 15 символов"
+      },
+      controlUserPhone: "Телефон обязателен!",
+    }
+  });
+  
+  // маска телефона
+  $('[type=tel]').mask('+7(000)000-00-00', {placeholder: "+7(___)___-__-__"});
 
 });
