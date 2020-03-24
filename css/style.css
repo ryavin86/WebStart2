@@ -793,6 +793,9 @@ body {
   .footer__menu {
     background-color: #131313;
     padding: 4.285rem; }
+  .footer__map {
+    margin-bottom: 4rem;
+    min-height: 465px; }
 
 .modal {
   opacity: 0;
