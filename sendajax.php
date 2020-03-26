@@ -34,7 +34,7 @@ try {
     $mail->Body    = "Имя пользователя: ${userName}, его телефон: ${userPhone}, email: ${userEmail} ";
 
     if ($mail->send();) {
-        header('Location: thanks.html')
+        echo 'Ok';
     }
     else {
         echo "Письмо не отпрвлено. Mailer Error: {$mail->ErrorInfo}";
