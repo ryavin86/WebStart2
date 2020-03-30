@@ -78,6 +78,9 @@ $(document).ready(function () {
           alert('Форма отправлена');
           $(form)[0].reset();
           modal.removeClass('modal--visible');
+        },
+        error: function (response) {
+          alert('Форма не отпрвлена');
         }
       });
     }

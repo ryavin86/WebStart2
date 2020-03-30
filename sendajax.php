@@ -26,14 +26,14 @@ try {
 
     //Recipients
     $mail->setFrom('ryavin_86@mail.ru', 'Виктор');
-    $mail->addAddress('ryabish@gmail.com', 'Joe User');     // Add a recipient
+    $mail->addAddress('ryabish@gmail.com');     // Add a recipient
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Новая заявка с сайта';
     $mail->Body    = "Имя пользователя: ${userName}, его телефон: ${userPhone}, email: ${userEmail} ";
 
-    if ($mail->send();) {
+    if ($mail->send()) {
         echo 'Ok';
     }
     else {
