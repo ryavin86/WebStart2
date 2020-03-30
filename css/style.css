@@ -971,4 +971,10 @@ body {
     margin-left: 0; }
   .design {
     background-color: #131313;
-    color: #fff; } }
+    color: #fff; }
+  .footer {
+    background: #131313; }
+    .footer__button {
+      margin: 0; }
+  .policy__label--center {
+    justify-content: flex-start; } }
